@@ -9,8 +9,8 @@ stages:
       size: 109
     - path: src/get_data.py
       hash: md5
-      md5: eb267376fcc666c3de39b3d76763619b
-      size: 599
+      md5: 484cf63bdaf6f1165977443a982c7db1
+      size: 587
     outs:
     - path: data/raw/tips.csv
       hash: md5
