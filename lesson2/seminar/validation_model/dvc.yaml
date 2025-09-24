@@ -1,0 +1,21 @@
+stages:
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - src/evaluate.py
+      - models/model.pkl
+      - params.yaml
+    outs:
+      - metrics/metrics.json
+    metrics:
+      - metrics/metrics.json
+
+  validate_model:
+    cmd: python src/validate_model.py
+    deps:
+      - src/validate_model.py
+      - models/model.pkl
+      - params.yaml
+      - metrics/metrics.json
+    needs:
+      - evaluate
