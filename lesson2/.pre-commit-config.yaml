@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0  # Актуальная версия на сентябрь 2025
+    hooks:
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: trailing-whitespace
+  - repo: https://github.com/psf/black
+    rev: 25.9.0  # Актуальная версия
+    hooks:
+      - id: black
+  - repo: https://github.com/PyCQA/isort
+    rev: 6.0.1  # Актуальная версия isort
+    hooks:
+      - id: isort
