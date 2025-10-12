@@ -78,3 +78,13 @@ def monitor_predict(api_url, img_path):
             "response": None,
             "error": str(e)
         }
+
+def get_alert_level(value, warning, critical):
+    if value is None:
+        return "grey"
+    elif value >= critical:
+        return "red"
+    elif value >= warning:
+        return "yellow"
+    else:
+        return "green"
